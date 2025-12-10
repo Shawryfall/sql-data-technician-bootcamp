@@ -1,35 +1,50 @@
-# SQL Data Technician Workbook
+# SQL Portfolio - Data Technician Training
 
-This repository contains SQL work based on a training workbook.  
-It includes:
+SQL queries and database design projects from my Data Technician bootcamp.
 
-- A small **retail / corner shop schema** with sample data
-- A collection of **analysis queries** using the classic `world` sample database
+## Projects
 
-The goal is to provide clear, self-contained SQL that can be cloned and reused by anyone learning SQL.
+### 1. Corner Shop Database
+**File:** `corner_shop_database.sql`
 
----
+Designed a retail database system for inventory, sales, and customer loyalty tracking.
 
-## Contents
+- 4 normalized tables with proper relationships
+- Foreign key constraints
+- Sample data and business queries
 
-- `sql/01_cornershop_schema.sql`  
-  Schema and sample data for a simple corner-shop database with products, customers, sales, and sale items.
+### 2. World Database Analysis
+**File:** `world_database_queries.sql`
 
-- `sql/02_world_db_practical.sql`  
-  A series of queries solving realistic scenarios using the MySQL `world` sample database.
+19 SQL queries analyzing global cities and countries data:
+- Population statistics
+- Geographic filtering
+- Multi-table joins
+- Aggregate functions
 
----
+## Skills Demonstrated
 
-## Getting started
+- Database design and normalization
+- Complex SQL queries (JOIN, GROUP BY, subqueries)
+- Aggregate functions (COUNT, AVG, MIN, MAX)
+- Data analysis and reporting
 
-### 1. Requirements
+## Setup
 
-- Any SQL database that supports standard SQL and the `world` schema  
-  (e.g. MySQL / MariaDB).
+**Prerequisites:** MySQL 5.7+ or 8.0+
 
-### 2. Corner shop schema
-
-To create the corner shop database and insert sample data:
-
+### Corner Shop Database (Ready to Use)
 ```bash
-mysql -u your_user -p < sql/01_cornershop_schema.sql
+mysql -u root -p < corner_shop_database.sql
+```
+
+### World Database Queries
+1. Download the World Database: [world_db.sql](https://justit831-my.sharepoint.com/:u:/g/personal/danpe_justit_co_uk/Ef6vAaaYVi5FhHqKGxqnn60B9g2khoYekEIO3Y7J00UcJQ?e=pv9NNE)
+2. Import it:
+```bash
+mysql -u root -p < world_db.sql
+```
+3. Run the queries:
+```bash
+mysql -u root -p world < world_database_queries.sql
+```
